@@ -73,6 +73,9 @@ const gitInfo = getGitInfo();
 
 export default defineConfig((config) => {
   return {
+    server: {
+    allowedHosts: ['bolt-0m7z.onrender.com'] // Add your Render subdomain here
+  },
     define: {
       __COMMIT_HASH: JSON.stringify(gitInfo.commitHash),
       __GIT_BRANCH: JSON.stringify(gitInfo.branch),
